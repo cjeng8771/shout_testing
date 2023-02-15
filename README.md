@@ -31,6 +31,11 @@ Note: `tmux` allows multiple remote sessions to remain active even when the SSH 
 
     (1) **./3.run_cmd.sh**: make sure that the CMD in line 16 is `save_iq_w_tx_file`.
     
+    (1.5) **useexternalclock = True**: edit meascli.py to enable the use of external clock white rabbit in nodes.
+    
+    Path: 
+        `/local/repository/shout/meascli.py`.
+    
     (2) **save_iq_w_tx_file.json**: 
     
     Path: 
