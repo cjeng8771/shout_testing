@@ -1,0 +1,31 @@
+from browning: 
+fm, honors
+hospital, smt, ustar
+
+from fm:
+browning, hosptial, smt
+honors, ustar
+
+from honors:
+browning, fm, ustar
+hospital, smt
+
+from hospital:
+browning, honors
+fm, smt, ustar
+
+from smt:
+browning, honors
+fm, hospital, ustar
+
+from ustar:
+browning, honors, smt
+fm, hospital
+
+GROUPS (2)
+fm, hospital, smt, ustar
+browning, honors
+
+GROUPS (1)
+fm, honors, hospital, ustar
+browning, smt, bes

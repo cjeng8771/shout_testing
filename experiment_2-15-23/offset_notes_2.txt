@@ -1,0 +1,59 @@
+Max crosscorrelation with preamble at lag:
+
+with repNum =          0,    1,    2,    3          with repNum =  0,    1,    2,    3
+
+#####     txloc = bes     #####
+rxloc = browning - lag 3106, 1706, 306, 506                   lag --- no data ---
+rxloc = fm -       lag 4026, 2626, 1234, 1424                 lag --- no data ---
+rxloc = honors -   lag 4034, 2634, 1234, 1442                 lag --- no data ---
+rxloc = hospital - lag 4034, 2624, 1233, 1457                 lag --- no data ---
+rxloc = smt -      lag 3107, 1699, 4371, 4587                 lag --- no data ---
+rxloc = ustar -    lag 4026, 2626, 1234, 1434                 lag --- no data ---
+
+#####     txloc = browning     #####
+rxloc = bes -      lag 2619, 2827, 3035, 1635                 lag --- no data ---
+rxloc = fm -       lag 3539, 3755, 3955, 2555                 lag 2376, 1576, 77, 181
+rxloc = honors -   lag 3539, 3747, 3955, 2555                 lag 2711, 2773, 4474, 3902
+rxloc = hospital - lag 3539, 3747, 3963, 2555                 lag 39, 740, 2470, 2210
+rxloc = smt -      lag 2619, 2819, 3027, 1635                 lag 47, 1962, 4626, 3215
+rxloc = ustar -    lag 3547, 3755, 3963, 2563                 lag 39, 4280, 197, 3442
+
+#####     txloc = fm     #####
+rxloc = bes -      lag 1910, 2118, 710, 926                   lag --- no data ---
+rxloc = browning - lag 1902, 2118, 4782, 926                  lag 3067, 2315, 1136, 1806
+rxloc = honors -   lag 2830, 3054, 1646, 1846                 lag 404, 4526, 1325, 158
+rxloc = hospital - lag 2830, 3039, 1639, 1855                 lag 3076, 1103, 2708, 2203
+rxloc = smt -      lag 1911, 2111, 4791, 919                  lag 3068, 943, 2799, 4650
+rxloc = ustar -    lag 2831, 3047, 1647, 1847                 lag 396, 3908, 2824, 1699
+
+#####     txloc = honors     #####
+rxloc = bes -      lag 3303, 1902, 2118, 4782                 lag --- no data ---
+rxloc = browning - lag 3303, 1911, 2119, 4791                 lag 3955, 230, 2247, 2458
+rxloc = fm -       lag 167, 2839, 3039, 1639                  lag 3588, 2621, 103, 1610
+rxloc = hospital - lag 158, 2830, 3038, 1638                  lag 1284, 745, 1117, 3491
+rxloc = smt -      lag 3302, 1902, 2110, 710                  lag 1284, 1944, 3132, 1535
+rxloc = ustar -    lag 158, 2830, 3038, 1638                  lag 3956, 2387, 3099, 2919
+
+#####     txloc = hospital     #####
+rxloc = bes -      lag 2638, 2839, 3038, 3263                 lag --- no data ---
+rxloc = browning - lag 2631, 2840, 3047, 3256                 lag 207, 1679, 2824, 879
+rxloc = fm -       lag 3568, 3776, 3976, 4192                 lag 2528, 1328, 3884, 2827
+rxloc = honors -   lag 3559, 3767, 3975, 111                  lag 198, 4342, 4296, 3121
+rxloc = smt -      lag 2631, 2839, 3055, 3255                 lag 2870, 1670, 2175, 4571
+rxloc = ustar -    lag 3567, 3775, 3975, 111                  lag 2870, 4342, 2774, 4588
+
+#####     txloc = smt     #####
+rxloc = bes -      lag 3321, 1929, 2129, 729                  lag --- no data ---
+rxloc = browning - lag 3329, 1929, 2137, 4809                 lag 295, 607, 3670, 2488
+rxloc = fm -       lag 186, 2858, 3066, 1666                  lag 2632, 2936, 2687, 2117
+rxloc = honors -   lag 176, 2848, 3056, 1665                  lag 295, 3271, 2068, 1535
+rxloc = hospital - lag 176, 2848, 3056, 1665                  lag 2967, 607, 206, 1026
+rxloc = ustar -    lag 185, 2857, 3065, 1665                  lag 2975, 3271, 1323, 354
+
+#####     txloc = ustar     ######
+rxloc = bes -      lag 3009, 3217, 3425, 3625                 lag --- no data ---
+rxloc = browning - lag 3000, 3208, 3416, 3624                 lag 3588, 1628, 617, 1675
+rxloc = fm -       lag 3930, 4146, 282, 4562                  lag 573, 4333, 506, 4411
+rxloc = honors -   lag 3937, 73, 4353, 489                    lag 3588, 308, 785, 1336
+rxloc = hospital - lag 3928, 4136, 4344, 4560                 lag 916, 1718, 106, 1124
+rxloc = smt -      lag 3009, 3209, 3425, 3633                 lag 3580, 4304, 4067, 2291
