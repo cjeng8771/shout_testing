@@ -87,8 +87,15 @@ Note: `tmux` allows multiple remote sessions to remain active even when the SSH 
     ```
     ./3.run_cmd.sh
     ```
+
+4. Collection Confirmation
+    In one of the `orch` SSH sessions, check that the data folder was created by running the following command and checking for a directory called ```Shout_meas_datestr_timestr``` with three files: ```log, measurements.hdf5, save_iq_w_tx_file.json```
+
+    ```
+    ls /local/data/
+    ```
     
-4. Transfer the measurement file back to the local host
+5. Transfer the measurement file back to the local host
    ```
    scp -r <username>@<orch_node_hostname>:/local/data/Shout_meas_datestr_timestr /<local_dir>
    ```
