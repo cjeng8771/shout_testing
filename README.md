@@ -26,10 +26,24 @@ Once the experiemnt is ready, go to `List View` for the node hostname.
     ```
 Note: `tmux` allows multiple remote sessions to remain active even when the SSH connection gets disconncted.
 
+### Designing an IQ file
+1. Use the signal generation Jupyter Notebook (https://github.com/npatwari/tx_rx_processing/blob/main/QPSK_signal_generationV3.ipynb).
+2. Change the Info_to_TX variable to the message desired to be transmitted (using the same length at the placeholder one).
+3. Use the file transfer script (https://github.com/npatwari/tx_rx_processing/blob/main/filetransfer.sh) to scp the iq file to all nodes. Make sure to update the HOSTS using the List View of your experiment, as well as the iq filename. The file will show up in the ~ directory on the nodes.
+4. Use the following command (updating the iq file name) to move the iq file to the path where it is specified in the JSON file. This eliminates what needs to be edited in the JSON file on each node.
+    ```
+    mv ~/QPSK_signal_2023_01_18_neal.iq /local/repository/shout/signal_library/QPSK_signal_2023_01_18_neal.iq
+    ```
+
 #### Transmission and reception 
 1. Files to modify before running an experiment:
 
     (1) **./3.run_cmd.sh**: make sure that the CMD in line 16 is `save_iq_w_tx_file`.
+    
+    (1.5) **useexternalclock = True**: edit meascli.py to enable the use of external clock white rabbit in nodes.
+    
+    Path: 
+        `/local/repository/shout/meascli.py`.
     
     (2) **save_iq_w_tx_file.json**: 
     
@@ -73,10 +87,26 @@ Note: `tmux` allows multiple remote sessions to remain active even when the SSH 
     ```
     ./3.run_cmd.sh
     ```
+
+4. Collection Confirmation
+    In one of the `orch` SSH sessions, check that the data folder was created by running the following command and checking for a directory called ```Shout_meas_datestr_timestr``` with three files: ```log, measurements.hdf5, save_iq_w_tx_file.json```
+
+    ```
+    ls /local/data/
+    ```
     
-4. Transfer the measurement file back to the local host
+5. Transfer the measurement file back to the local host
    ```
    scp -r <username>@<orch_node_hostname>:/local/data/Shout_meas_datestr_timestr /<local_dir>
+   ```
+
+6. If you are testing UHD, run the following command on each node (other than orchestrator). Change filename to be an appropriate title such as probe_bes.txt if you are wanting to save the results. Otherwise, just run the ```uhd_usrp_probe``` without piping the output to a file.
+   ```
+   uhd_usrp_probe > filename.txt
+   ```
+   Then, run the following command on your local host to recover the created files.
+   ```
+   scp <username>@<radio_hostname>:/local/repository/bin/filename.txt /<local_dir>
    ```
    
 ## QPSK Demodulation
