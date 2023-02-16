@@ -99,6 +99,15 @@ Note: `tmux` allows multiple remote sessions to remain active even when the SSH 
    ```
    scp -r <username>@<orch_node_hostname>:/local/data/Shout_meas_datestr_timestr /<local_dir>
    ```
+
+6. If you are testing UHD, run the following command on each node (other than orchestrator). Change filename to be an appropriate title such as probe_bes.txt if you are wanting to save the results. Otherwise, just run the ```uhd_usrp_probe``` without piping the output to a file.
+   ```
+   uhd_usrp_probe > filename.txt
+   ```
+   Then, run the following command on your local host to recover the created files.
+   ```
+   scp <username>@<radio_hostname>:/local/repository/bin/filename.txt /<local_dir>
+   ```
    
 ## QPSK Demodulation
 #### SDR node pairs used for this session
