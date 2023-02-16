@@ -26,6 +26,15 @@ Once the experiemnt is ready, go to `List View` for the node hostname.
     ```
 Note: `tmux` allows multiple remote sessions to remain active even when the SSH connection gets disconncted.
 
+### Designing an IQ file
+1. Use the signal generation Jupyter Notebook (https://github.com/npatwari/tx_rx_processing/blob/main/QPSK_signal_generationV3.ipynb).
+2. Change the Info_to_TX variable to the message desired to be transmitted (using the same length at the placeholder one).
+3. Use the file transfer script (https://github.com/npatwari/tx_rx_processing/blob/main/filetransfer.sh) to scp the iq file to all nodes. Make sure to update the HOSTS using the List View of your experiment, as well as the iq filename. The file will show up in the ~ directory on the nodes.
+4. Use the following command (updating the iq file name) to move the iq file to the path where it is specified in the JSON file. This eliminates what needs to be edited in the JSON file on each node.
+    ```
+    mv ~/QPSK_signal_2023_01_18_neal.iq /local/repository/shout/signal_library/QPSK_signal_2023_01_18_neal.iq
+    ```
+
 #### Transmission and reception 
 1. Files to modify before running an experiment:
 
